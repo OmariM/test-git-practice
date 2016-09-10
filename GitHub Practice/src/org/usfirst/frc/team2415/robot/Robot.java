@@ -1,14 +1,15 @@
 
 package org.usfirst.frc.team2415.robot;
 
+import org.usfirst.frc.team2415.robot.commands.JulieCommand;
+import org.usfirst.frc.team2415.robot.commands.OmariCommand;
+import org.usfirst.frc.team2415.robot.subsystems.ShowNameSubsystem;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team2415.robot.commands.ExampleCommand;
-import org.usfirst.frc.team2415.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -19,8 +20,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static ExampleSubsystem exampleSubsystem;
-	public static OI oi;
+	public static ShowNameSubsystem showNameSubsystem;
 
     Command autonomousCommand;
     SendableChooser chooser;
@@ -30,7 +30,10 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-    	exampleSubsystem = new ExampleSubsystem();
+    	showNameSubsystem = new ShowNameSubsystem();
+    	
+    	new JulieCommand();
+    	new OmariCommand();
     }
 	
 	/**
