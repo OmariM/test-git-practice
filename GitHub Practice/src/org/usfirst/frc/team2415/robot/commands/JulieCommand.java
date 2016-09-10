@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class JulieCommand extends Command {
     
 	//TODO: actually put your name in here
-	String name = "YOURNAME";
+	String name = "Julie";
 	
 	public JulieCommand() {
         // Use requires() here to declare subsystem dependencies
