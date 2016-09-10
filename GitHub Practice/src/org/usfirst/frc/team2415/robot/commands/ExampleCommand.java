@@ -9,6 +9,8 @@ import org.usfirst.frc.team2415.robot.Robot;
  *
  */
 public class ExampleCommand extends Command {
+	
+	double nameVar = 13;
 
     public ExampleCommand() {
         // Use requires() here to declare subsystem dependencies
